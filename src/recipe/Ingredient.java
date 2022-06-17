@@ -1,5 +1,7 @@
 package recipe;
 
+import java.util.Comparator;
+
 public class Ingredient {
 
     public String name;
@@ -23,10 +25,11 @@ public class Ingredient {
         if (obj == this) {
             return true;
         }
-        if ( !(obj instanceof Ingredient ingredient)) {
+        if ( !(obj instanceof Ingredient)) {
             return false;
         }
 
+        Ingredient ingredient = (Ingredient) obj;
         return this.name.equals(ingredient.name) && this.quantity == ingredient.quantity;
     }
 }

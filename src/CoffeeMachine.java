@@ -13,8 +13,9 @@ public class CoffeeMachine {
 
         Recipe recipe = new Recipe();
 
+        recipe.AddIngredient(new Ingredient("water", 2,100.00));
         recipe.AddIngredient(new Ingredient("coffee", 1,20.00));
-        recipe.AddIngredient(new Ingredient("water", 1,100.00));
+
 
         EspressoStrategy espressoStrategy = new EspressoStrategy(validator, recipe);
 
